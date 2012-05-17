@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -83,16 +83,21 @@
 <layer number="109" name="fp9" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="110" name="fp0" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="111" name="LPC17xx" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="124" name="bTestmark" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="125" name="_tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="no" active="no"/>
 <layer number="201" name="201bmp" color="2" fill="1" visible="no" active="no"/>
@@ -122,6 +127,8 @@
 <layer number="231" name="Eagle3D_PG1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
@@ -5501,33 +5508,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
 <rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
 </package>
-<package name="JUMPER_SPDT">
-<wire x1="-3.81" y1="-0.762" x2="-3.81" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="3.302" y1="1.27" x2="1.778" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="0.762" x2="1.778" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="3.302" y1="-1.27" x2="1.778" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-0.762" x2="1.778" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="3.302" y1="-1.27" x2="3.81" y2="-0.762" width="0.1524" layer="21"/>
-<wire x1="3.302" y1="1.27" x2="3.81" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="3.81" y1="0.762" x2="3.81" y2="-0.762" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="1.27" x2="1.27" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="1.27" x2="-0.762" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="0.762" x2="-0.762" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-1.778" y1="1.27" x2="-1.27" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="0.762" x2="-3.302" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-1.778" y1="1.27" x2="-3.302" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="-1.27" x2="1.27" y2="-0.762" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-0.762" x2="-0.762" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.778" y1="-1.27" x2="-1.27" y2="-0.762" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="-0.762" x2="-3.302" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="-1.27" x2="-0.762" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.778" y1="-1.27" x2="-3.302" y2="-1.27" width="0.1524" layer="21"/>
-<pad name="1" x="-2.54" y="0" drill="0.9" diameter="1.9304" rot="R90"/>
-<pad name="2" x="0" y="0" drill="0.9" diameter="1.9304" rot="R90"/>
-<pad name="3" x="2.54" y="0" drill="0.9" diameter="1.9304" rot="R90"/>
-<text x="-3.81" y="3.429" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.81" y="1.778" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-</package>
 <package name="HEADER_2X3">
 <description>6-pin (2x3) 0.1" through-hole pin header. Suitable for ISP headers etc.</description>
 <wire x1="-3.81" y1="-1.905" x2="-3.175" y2="-2.54" width="0.1524" layer="21"/>
@@ -5558,6 +5538,36 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pad name="6" x="2.54" y="1.27" drill="1" diameter="1.6764"/>
 <text x="-3.81" y="5.08" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.81" y="3.175" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="JUMPER_SPDT">
+<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-3.175" y1="1.27" x2="-1.905" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-1.27" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-1.905" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-0.635" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.27" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-3.175" y1="1.27" x2="-3.81" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-3.81" y1="-0.635" x2="-3.175" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="-3.175" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="3.81" y1="0.635" x2="3.81" y2="-0.635" width="0.2032" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="1.016" rot="R90"/>
+<pad name="2" x="0" y="0" drill="1.016" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="1.016" rot="R90"/>
+<text x="-3.81" y="5.08" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="2.54" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -5669,8 +5679,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <text x="0.635" y="1.905" size="1.524" layer="95">OUT</text>
 <pin name="IN" x="-7.62" y="2.54" visible="off" length="short" direction="in"/>
 <pin name="GND" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
-<pin name="OUT" x="7.62" y="2.54" visible="off" length="short" direction="out" rot="R180"/>
-<pin name="OUT@1" x="7.62" y="2.54" visible="off" length="short" direction="out" rot="R180"/>
+<pin name="OUT" x="7.62" y="2.54" visible="off" length="short" direction="pwr" rot="R180"/>
 </symbol>
 <symbol name="+3.3V">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
@@ -5683,23 +5692,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
 <text x="2.54" y="-2.54" size="1.27" layer="96">&gt;VALUE</text>
 <pin name="VDD" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-<symbol name="JUMPER-SPDT">
-<wire x1="2.54" y1="-2.54" x2="2.54" y2="-1.27" width="0.1524" layer="94"/>
-<wire x1="0" y1="-2.54" x2="0" y2="-1.27" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-1.27" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="2.54" y2="-1.27" width="0.3048" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="-1.27" width="0.3048" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-2.54" y2="-1.27" width="0.3048" layer="94"/>
-<wire x1="-3.175" y1="-2.54" x2="3.175" y2="-2.54" width="0.3048" layer="94"/>
-<wire x1="3.175" y1="-2.54" x2="3.175" y2="-1.905" width="0.3048" layer="94"/>
-<wire x1="3.175" y1="-1.905" x2="-3.175" y2="-1.905" width="0.3048" layer="94"/>
-<wire x1="-3.175" y1="-1.905" x2="-3.175" y2="-2.54" width="0.3048" layer="94"/>
-<text x="-3.81" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
-<text x="5.715" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="1" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
-<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
-<pin name="3" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
 </symbol>
 <symbol name="HEADER_2X3">
 <wire x1="-5.08" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
@@ -5714,6 +5706,23 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pin name="4" x="5.08" y="0" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
 <pin name="5" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="6" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+</symbol>
+<symbol name="JUMPER-SPDT">
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="-1.27" width="0.3048" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-1.27" width="0.3048" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="-1.27" width="0.3048" layer="94"/>
+<wire x1="-3.175" y1="-2.54" x2="3.175" y2="-2.54" width="0.3048" layer="94"/>
+<wire x1="3.175" y1="-2.54" x2="3.175" y2="-1.905" width="0.3048" layer="94"/>
+<wire x1="3.175" y1="-1.905" x2="-3.175" y2="-1.905" width="0.3048" layer="94"/>
+<wire x1="-3.175" y1="-1.905" x2="-3.175" y2="-2.54" width="0.3048" layer="94"/>
+<text x="-3.81" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.715" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="3" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -5845,6 +5854,8 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 </devices>
 </deviceset>
 <deviceset name="LD1117-FIXED" prefix="IC">
+<description>Fixed-voltage LD1117 series LDOs in SOT-223 package.
+Note that the ground pin is labelled as ground, not as adj, because it's not the adjustable-voltage part.</description>
 <gates>
 <gate name="G$1" symbol="LD1117-FIXED" x="0" y="0"/>
 </gates>
@@ -5853,8 +5864,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <connects>
 <connect gate="G$1" pin="GND" pad="1"/>
 <connect gate="G$1" pin="IN" pad="3"/>
-<connect gate="G$1" pin="OUT" pad="2"/>
-<connect gate="G$1" pin="OUT@1" pad="4"/>
+<connect gate="G$1" pin="OUT" pad="2 4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5886,23 +5896,6 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 </device>
 </devices>
 </deviceset>
-<deviceset name="JUMPER_SPDT">
-<gates>
-<gate name="G$1" symbol="JUMPER-SPDT" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="JUMPER_SPDT">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="HEADER_2X3" prefix="J">
 <description>6-pin (2x3) 0.1" male through-hole pin header.</description>
 <gates>
@@ -5917,6 +5910,24 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <connect gate="G$1" pin="4" pad="4"/>
 <connect gate="G$1" pin="5" pad="5"/>
 <connect gate="G$1" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="JUMPER_SPDT" prefix="J">
+<description>3-pin (SPDT) jumper header, 0.1" pitch through-hole.</description>
+<gates>
+<gate name="G$1" symbol="JUMPER-SPDT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JUMPER_SPDT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -5942,20 +5953,20 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <part name="C2" library="freetronics" deviceset="CAP" device="0603" value="22p"/>
 <part name="R5" library="freetronics" deviceset="RESISTOR" device="0603" value="22R"/>
 <part name="R6" library="freetronics" deviceset="RESISTOR" device="0603" value="22R"/>
-<part name="IC1" library="freetronics-jon" deviceset="ATMEL_ATMEGA8U2-MU" device="QFN" value="ATMEGA16U2-MU"/>
+<part name="IC1" library="freetronics-jon" deviceset="ATMEL_ATMEGA8U2-MU" device="QFN" value="ATMEGA16U2"/>
 <part name="R2" library="freetronics" deviceset="RESISTOR" device="0603" value="1M"/>
 <part name="R3" library="freetronics" deviceset="RESISTOR" device="0603" value="27R"/>
 <part name="L1" library="freetronics-master-v1" deviceset="INDUCTOR" device="0805-LARGE" value="Ferrite bead 0805"/>
 <part name="C4" library="freetronics" deviceset="CAP" device="0603" value="1uF"/>
 <part name="Z1" library="freetronics-luke" deviceset="PGB102ST23" device=""/>
 <part name="F1" library="freetronics-luke" deviceset="PTC" device="" value="500mA PTC"/>
-<part name="J3" library="freetronics-luke" deviceset="USB-FT" device="" value="USB"/>
+<part name="J2" library="freetronics-luke" deviceset="USB-FT" device="" value="USB"/>
 <part name="Q1" library="freetronics-master-v1" deviceset="CRYSTAL" device="HC49US" value="16MHz"/>
 <part name="C3" library="freetronics" deviceset="CAP" device="0603" value="100n"/>
 <part name="J8" library="freetronics-luke" deviceset="SJ" device="" value="Gnd"/>
-<part name="J6" library="freetronics-luke" deviceset="SJ" device="" value="DFU"/>
-<part name="J5" library="freetronics-master-v1" deviceset="M08" device="STD"/>
-<part name="J4" library="freetronics-master-v1" deviceset="M02" device="PTH"/>
+<part name="J5" library="freetronics-luke" deviceset="SJ" device="" value="DFU"/>
+<part name="J4" library="freetronics-master-v1" deviceset="M08" device="STD"/>
+<part name="J3" library="freetronics-master-v1" deviceset="M02" device="PTH"/>
 <part name="J7" library="freetronics-master-v1" deviceset="M03" device="PTH"/>
 <part name="LED1" library="freetronics-master-v1" deviceset="RGBLED" device="SMT" value="RGB"/>
 <part name="R4" library="freetronics-luke" deviceset="CAY16" device="" value="1k"/>
@@ -5966,8 +5977,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <part name="U$16" library="freetronics-luke" deviceset="GND" device=""/>
 <part name="U$17" library="freetronics-luke" deviceset="GND" device=""/>
 <part name="U$18" library="freetronics-luke" deviceset="GND" device=""/>
-<part name="J1" library="freetronics-master-v1" deviceset="M06" device="SIP" value="Serial"/>
-<part name="IC2" library="freetronics-luke" deviceset="LD1117-FIXED" device="" value="LD1117S33"/>
+<part name="J6" library="freetronics-master-v1" deviceset="M06" device="SIP" value="Serial"/>
 <part name="U$4" library="freetronics-luke" deviceset="GND" device=""/>
 <part name="U$5" library="freetronics-luke" deviceset="+5V" device=""/>
 <part name="U$6" library="freetronics-luke" deviceset="+3.3V" device=""/>
@@ -5976,7 +5986,6 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <part name="U$1" library="freetronics-luke" deviceset="VDD" device=""/>
 <part name="U$2" library="freetronics-luke" deviceset="VDD" device=""/>
 <part name="U$10" library="freetronics-luke" deviceset="VDD" device=""/>
-<part name="J9" library="freetronics-luke" deviceset="JUMPER_SPDT" device="" value="VDD SELECT"/>
 <part name="U$11" library="freetronics-luke" deviceset="+5V" device=""/>
 <part name="U$12" library="freetronics-luke" deviceset="+3.3V" device=""/>
 <part name="U$19" library="freetronics-luke" deviceset="VDD" device=""/>
@@ -5986,7 +5995,9 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <part name="U$3" library="freetronics-luke" deviceset="GND" device=""/>
 <part name="U$21" library="freetronics-luke" deviceset="GND" device=""/>
 <part name="U$22" library="freetronics-luke" deviceset="VDD" device=""/>
-<part name="J2" library="freetronics-luke" deviceset="HEADER_2X3" device="" value="ISP"/>
+<part name="J1" library="freetronics-luke" deviceset="HEADER_2X3" device="" value="ISP"/>
+<part name="IC2" library="freetronics-luke" deviceset="LD1117-FIXED" device="" value="LD1117-33"/>
+<part name="J9" library="freetronics-luke" deviceset="JUMPER_SPDT" device="" value="VDD Select"/>
 </parts>
 <sheets>
 <sheet>
@@ -6012,7 +6023,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <text x="193.04" y="50.8" size="1.27" layer="98">Jumper on 3 x 0.1" through-hole</text>
 <text x="193.04" y="48.26" size="1.27" layer="98">header pins.</text>
 <text x="116.84" y="38.1" size="1.27" layer="98">0603</text>
-<text x="73.66" y="68.58" size="1.27" layer="98">0603</text>
+<text x="71.12" y="68.58" size="1.27" layer="98">0603</text>
 <text x="64.262" y="85.852" size="1.27" layer="98">0603</text>
 <text x="64.262" y="80.518" size="1.27" layer="98">0603</text>
 <text x="59.69" y="96.52" size="1.27" layer="98">1812</text>
@@ -6064,8 +6075,8 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <attribute name="VALUE" x="76.2" y="114.3" size="1.27" layer="96"/>
 </instance>
 <instance part="L1" gate="G$1" x="50.8" y="71.12" smashed="yes" rot="MR180">
-<attribute name="NAME" x="30.48" y="60.96" size="1.27" layer="95"/>
-<attribute name="VALUE" x="30.48" y="58.42" size="1.27" layer="96"/>
+<attribute name="NAME" x="38.1" y="60.96" size="1.27" layer="95"/>
+<attribute name="VALUE" x="38.1" y="58.42" size="1.27" layer="96"/>
 </instance>
 <instance part="C4" gate="G$1" x="78.74" y="71.12" smashed="yes">
 <attribute name="NAME" x="71.12" y="73.66" size="1.27" layer="95"/>
@@ -6079,7 +6090,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <attribute name="NAME" x="48.26" y="99.06" size="1.27" layer="95"/>
 <attribute name="VALUE" x="48.26" y="96.52" size="1.27" layer="96"/>
 </instance>
-<instance part="J3" gate="G$1" x="33.02" y="88.9"/>
+<instance part="J2" gate="G$1" x="33.02" y="88.9"/>
 <instance part="Q1" gate="G$1" x="63.5" y="116.84" smashed="yes" rot="R90">
 <attribute name="NAME" x="60.96" y="119.38" size="1.27" layer="95"/>
 <attribute name="VALUE" x="53.34" y="116.84" size="1.27" layer="96"/>
@@ -6092,15 +6103,15 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <attribute name="NAME" x="60.96" y="71.12" size="1.27" layer="95"/>
 <attribute name="VALUE" x="60.96" y="68.58" size="1.27" layer="96"/>
 </instance>
-<instance part="J6" gate="G$1" x="139.7" y="78.74" smashed="yes" rot="R90">
+<instance part="J5" gate="G$1" x="139.7" y="78.74" smashed="yes" rot="R90">
 <attribute name="NAME" x="142.24" y="78.74" size="1.27" layer="95"/>
 <attribute name="VALUE" x="142.24" y="76.2" size="1.27" layer="96"/>
 </instance>
-<instance part="J5" gate="G$1" x="175.26" y="81.28" smashed="yes" rot="R180">
+<instance part="J4" gate="G$1" x="175.26" y="81.28" smashed="yes" rot="R180">
 <attribute name="NAME" x="173.99" y="91.948" size="1.27" layer="95"/>
 <attribute name="VALUE" x="180.34" y="93.98" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="J4" gate="G$1" x="203.2" y="88.9" smashed="yes" rot="R180">
+<instance part="J3" gate="G$1" x="203.2" y="88.9" smashed="yes" rot="R180">
 <attribute name="NAME" x="199.39" y="91.948" size="1.27" layer="95"/>
 <attribute name="VALUE" x="205.74" y="93.98" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -6131,13 +6142,9 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <instance part="U$16" gate="G$1" x="139.7" y="71.12"/>
 <instance part="U$17" gate="G$1" x="190.5" y="101.6"/>
 <instance part="U$18" gate="G$1" x="177.8" y="121.92"/>
-<instance part="J1" gate="G$1" x="226.06" y="76.2" smashed="yes" rot="MR0">
+<instance part="J6" gate="G$1" x="226.06" y="76.2" smashed="yes" rot="MR0">
 <attribute name="NAME" x="224.79" y="89.154" size="1.27" layer="95"/>
 <attribute name="VALUE" x="224.79" y="87.122" size="1.27" layer="96"/>
-</instance>
-<instance part="IC2" gate="G$1" x="137.16" y="45.72" smashed="yes">
-<attribute name="NAME" x="132.08" y="53.213" size="1.27" layer="95"/>
-<attribute name="VALUE" x="132.08" y="51.562" size="1.27" layer="96"/>
 </instance>
 <instance part="U$4" gate="G$1" x="137.16" y="33.02"/>
 <instance part="U$5" gate="G$1" x="121.92" y="48.26" smashed="yes" rot="R90">
@@ -6160,10 +6167,6 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 </instance>
 <instance part="U$10" gate="G$1" x="190.5" y="124.46" smashed="yes">
 <attribute name="VALUE" x="185.42" y="124.46" size="1.27" layer="96"/>
-</instance>
-<instance part="J9" gate="G$1" x="185.42" y="48.26" smashed="yes">
-<attribute name="NAME" x="177.8" y="53.34" size="1.27" layer="95"/>
-<attribute name="VALUE" x="177.8" y="50.8" size="1.27" layer="96"/>
 </instance>
 <instance part="U$11" gate="G$1" x="193.04" y="40.64" smashed="yes" rot="R270">
 <attribute name="VALUE" x="193.04" y="43.18" size="1.27" layer="96"/>
@@ -6188,9 +6191,17 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <instance part="U$22" gate="G$1" x="218.44" y="88.9" smashed="yes">
 <attribute name="VALUE" x="213.36" y="88.9" size="1.27" layer="96"/>
 </instance>
-<instance part="J2" gate="G$1" x="177.8" y="109.22" smashed="yes">
+<instance part="J1" gate="G$1" x="177.8" y="109.22" smashed="yes">
 <attribute name="NAME" x="172.72" y="101.6" size="1.27" layer="95"/>
 <attribute name="VALUE" x="176.276" y="101.6" size="1.27" layer="96"/>
+</instance>
+<instance part="IC2" gate="G$1" x="137.16" y="45.72" smashed="yes">
+<attribute name="NAME" x="132.08" y="53.34" size="1.27" layer="95"/>
+<attribute name="VALUE" x="132.08" y="51.308" size="1.27" layer="96"/>
+</instance>
+<instance part="J9" gate="G$1" x="185.42" y="48.26" smashed="yes">
+<attribute name="NAME" x="180.34" y="53.34" size="1.27" layer="95"/>
+<attribute name="VALUE" x="180.34" y="50.8" size="1.27" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -6238,7 +6249,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 </segment>
 <segment>
 <wire x1="139.7" y1="73.66" x2="139.7" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="J6" gate="G$1" pin="1"/>
+<pinref part="J5" gate="G$1" pin="1"/>
 <pinref part="U$16" gate="G$1" pin="GND"/>
 </segment>
 <segment>
@@ -6251,12 +6262,12 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <wire x1="182.88" y1="106.68" x2="190.5" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="106.68" x2="190.5" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="U$17" gate="G$1" pin="GND"/>
-<pinref part="J2" gate="G$1" pin="6"/>
+<pinref part="J1" gate="G$1" pin="6"/>
 </segment>
 <segment>
 <wire x1="137.16" y1="35.56" x2="137.16" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="GND"/>
 <pinref part="U$4" gate="G$1" pin="GND"/>
+<pinref part="IC2" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="127" y1="38.1" x2="127" y2="35.56" width="0.1524" layer="91"/>
@@ -6271,7 +6282,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="220.98" y1="71.12" x2="218.44" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="71.12" x2="218.44" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="J1" gate="G$1" pin="1"/>
+<pinref part="J6" gate="G$1" pin="1"/>
 <pinref part="U$21" gate="G$1" pin="GND"/>
 </segment>
 </net>
@@ -6283,12 +6294,12 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <junction x="139.7" y="91.44"/>
 <label x="142.24" y="91.694" size="1.27" layer="95"/>
 <pinref part="IC1" gate="G$1" pin="(CTS)PD7"/>
-<pinref part="J6" gate="G$1" pin="2"/>
+<pinref part="J5" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="220.98" y1="83.82" x2="210.82" y2="83.82" width="0.1524" layer="91"/>
 <label x="213.36" y="84.074" size="1.27" layer="95"/>
-<pinref part="J1" gate="G$1" pin="6"/>
+<pinref part="J6" gate="G$1" pin="6"/>
 </segment>
 </net>
 <net name="TXD" class="0">
@@ -6300,7 +6311,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="220.98" y1="78.74" x2="210.82" y2="78.74" width="0.1524" layer="91"/>
 <label x="213.36" y="78.994" size="1.27" layer="95"/>
-<pinref part="J1" gate="G$1" pin="4"/>
+<pinref part="J6" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -6309,7 +6320,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <wire x1="160.02" y1="114.3" x2="160.02" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="175.26" y1="109.22" x2="160.02" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="(SCLK)PB1"/>
-<pinref part="J2" gate="G$1" pin="3"/>
+<pinref part="J1" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -6318,7 +6329,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <wire x1="193.04" y1="109.22" x2="193.04" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="116.84" x2="129.54" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="(MOSI)PB2"/>
-<pinref part="J2" gate="G$1" pin="4"/>
+<pinref part="J1" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -6327,7 +6338,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <wire x1="162.56" y1="111.76" x2="162.56" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="119.38" x2="129.54" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="(MISO)PB3"/>
-<pinref part="J2" gate="G$1" pin="1"/>
+<pinref part="J1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="!RESET" class="0">
@@ -6343,7 +6354,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="175.26" y1="106.68" x2="160.02" y2="106.68" width="0.1524" layer="91"/>
 <label x="162.56" y="106.934" size="1.27" layer="95"/>
-<pinref part="J2" gate="G$1" pin="5"/>
+<pinref part="J1" gate="G$1" pin="5"/>
 </segment>
 </net>
 <net name="N$113" class="0">
@@ -6421,7 +6432,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="220.98" y1="81.28" x2="210.82" y2="81.28" width="0.1524" layer="91"/>
 <label x="213.36" y="81.534" size="1.27" layer="95"/>
-<pinref part="J1" gate="G$1" pin="5"/>
+<pinref part="J6" gate="G$1" pin="5"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -6451,10 +6462,10 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <junction x="35.56" y="76.2"/>
 <junction x="43.18" y="68.58"/>
 <pinref part="L1" gate="G$1" pin="1"/>
-<pinref part="J3" gate="G$1" pin="SH$4"/>
-<pinref part="J3" gate="G$1" pin="SH$3"/>
-<pinref part="J3" gate="G$1" pin="SH$2"/>
-<pinref part="J3" gate="G$1" pin="SH$1"/>
+<pinref part="J2" gate="G$1" pin="SH$4"/>
+<pinref part="J2" gate="G$1" pin="SH$3"/>
+<pinref part="J2" gate="G$1" pin="SH$2"/>
+<pinref part="J2" gate="G$1" pin="SH$1"/>
 <pinref part="Z1" gate="G$1" pin="P$3"/>
 </segment>
 </net>
@@ -6467,7 +6478,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <wire x1="40.64" y1="81.28" x2="40.64" y2="88.9" width="0.1524" layer="91"/>
 <junction x="40.64" y="88.9"/>
 <pinref part="R6" gate="G$1" pin="2"/>
-<pinref part="J3" gate="G$1" pin="D+"/>
+<pinref part="J2" gate="G$1" pin="D+"/>
 <pinref part="Z1" gate="G$1" pin="P$2"/>
 </segment>
 </net>
@@ -6480,7 +6491,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <wire x1="45.72" y1="81.28" x2="45.72" y2="91.44" width="0.1524" layer="91"/>
 <junction x="45.72" y="91.44"/>
 <pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="J3" gate="G$1" pin="D-"/>
+<pinref part="J2" gate="G$1" pin="D-"/>
 <pinref part="Z1" gate="G$1" pin="P$1"/>
 </segment>
 </net>
@@ -6488,7 +6499,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="55.88" y1="93.98" x2="38.1" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="F1" gate="G$1" pin="P$1"/>
-<pinref part="J3" gate="G$1" pin="VBUS"/>
+<pinref part="J2" gate="G$1" pin="VBUS"/>
 </segment>
 </net>
 <net name="N$117" class="0">
@@ -6516,7 +6527,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <junction x="58.42" y="74.93"/>
 <pinref part="IC1" gate="G$1" pin="UGND"/>
 <pinref part="L1" gate="G$1" pin="2"/>
-<pinref part="J3" gate="G$1" pin="GND"/>
+<pinref part="J2" gate="G$1" pin="GND"/>
 <pinref part="J8" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -6529,7 +6540,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="170.18" y1="78.74" x2="162.56" y2="78.74" width="0.1524" layer="91"/>
 <label x="165.1" y="78.994" size="1.27" layer="95"/>
-<pinref part="J5" gate="G$1" pin="5"/>
+<pinref part="J4" gate="G$1" pin="5"/>
 </segment>
 </net>
 <net name="PD0" class="0">
@@ -6565,7 +6576,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="195.58" y1="86.36" x2="187.96" y2="86.36" width="0.1524" layer="91"/>
 <label x="190.5" y="86.614" size="1.27" layer="95"/>
-<pinref part="J4" gate="G$1" pin="2"/>
+<pinref part="J3" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="PC2" class="0">
@@ -6589,7 +6600,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="170.18" y1="81.28" x2="162.56" y2="81.28" width="0.1524" layer="91"/>
 <label x="165.1" y="81.534" size="1.27" layer="95"/>
-<pinref part="J5" gate="G$1" pin="4"/>
+<pinref part="J4" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="PC6" class="0">
@@ -6601,7 +6612,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="170.18" y1="83.82" x2="162.56" y2="83.82" width="0.1524" layer="91"/>
 <label x="165.1" y="84.074" size="1.27" layer="95"/>
-<pinref part="J5" gate="G$1" pin="3"/>
+<pinref part="J4" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="PC5" class="0">
@@ -6613,7 +6624,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="170.18" y1="86.36" x2="162.56" y2="86.36" width="0.1524" layer="91"/>
 <label x="165.1" y="86.614" size="1.27" layer="95"/>
-<pinref part="J5" gate="G$1" pin="2"/>
+<pinref part="J4" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="PC4" class="0">
@@ -6625,7 +6636,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="170.18" y1="88.9" x2="162.56" y2="88.9" width="0.1524" layer="91"/>
 <label x="165.1" y="89.154" size="1.27" layer="95"/>
-<pinref part="J5" gate="G$1" pin="1"/>
+<pinref part="J4" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="PB4" class="0">
@@ -6635,9 +6646,9 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <pinref part="IC1" gate="G$1" pin="PB4"/>
 </segment>
 <segment>
+<pinref part="J4" gate="G$1" pin="8"/>
 <wire x1="170.18" y1="71.12" x2="162.56" y2="71.12" width="0.1524" layer="91"/>
 <label x="165.1" y="71.374" size="1.27" layer="95"/>
-<pinref part="J5" gate="G$1" pin="8"/>
 </segment>
 </net>
 <net name="PB5" class="0">
@@ -6649,7 +6660,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="170.18" y1="73.66" x2="162.56" y2="73.66" width="0.1524" layer="91"/>
 <label x="165.1" y="73.914" size="1.27" layer="95"/>
-<pinref part="J5" gate="G$1" pin="7"/>
+<pinref part="J4" gate="G$1" pin="7"/>
 </segment>
 </net>
 <net name="PB6" class="0">
@@ -6661,7 +6672,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="170.18" y1="76.2" x2="162.56" y2="76.2" width="0.1524" layer="91"/>
 <label x="165.1" y="76.454" size="1.27" layer="95"/>
-<pinref part="J5" gate="G$1" pin="6"/>
+<pinref part="J4" gate="G$1" pin="6"/>
 </segment>
 </net>
 <net name="PB0" class="0">
@@ -6673,7 +6684,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="195.58" y1="88.9" x2="187.96" y2="88.9" width="0.1524" layer="91"/>
 <label x="190.5" y="89.154" size="1.27" layer="95"/>
-<pinref part="J4" gate="G$1" pin="1"/>
+<pinref part="J3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -6705,8 +6716,8 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <wire x1="127" y1="45.72" x2="127" y2="48.26" width="0.1524" layer="91"/>
 <junction x="127" y="48.26"/>
 <pinref part="U$5" gate="G$1" pin="+5V"/>
-<pinref part="IC2" gate="G$1" pin="IN"/>
 <pinref part="C6" gate="G$1" pin="1"/>
+<pinref part="IC2" gate="G$1" pin="IN"/>
 </segment>
 <segment>
 <wire x1="76.2" y1="86.36" x2="88.9" y2="86.36" width="0.1524" layer="91"/>
@@ -6721,27 +6732,25 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="187.96" y1="43.18" x2="187.96" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="40.64" x2="190.5" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="J9" gate="G$1" pin="3"/>
 <pinref part="U$11" gate="G$1" pin="+5V"/>
+<pinref part="J9" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
-<wire x1="147.32" y1="48.26" x2="144.78" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="48.26" x2="147.32" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="45.72" x2="147.32" y2="48.26" width="0.1524" layer="91"/>
-<junction x="144.78" y="48.26"/>
-<junction x="147.32" y="48.26"/>
-<pinref part="IC2" gate="G$1" pin="OUT"/>
-<pinref part="IC2" gate="G$1" pin="OUT@1"/>
 <pinref part="U$6" gate="G$1" pin="+3V3"/>
 <pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="48.26" x2="147.32" y2="48.26" width="0.1524" layer="91"/>
+<junction x="147.32" y="48.26"/>
+<pinref part="IC2" gate="G$1" pin="OUT"/>
 </segment>
 <segment>
 <wire x1="182.88" y1="43.18" x2="182.88" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="40.64" x2="180.34" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="J9" gate="G$1" pin="1"/>
 <pinref part="U$12" gate="G$1" pin="+3V3"/>
+<pinref part="J9" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="VDD" class="0">
@@ -6768,7 +6777,7 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <wire x1="182.88" y1="111.76" x2="190.5" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="111.76" x2="190.5" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="U$10" gate="G$1" pin="VDD"/>
-<pinref part="J2" gate="G$1" pin="2"/>
+<pinref part="J1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="147.32" y1="152.4" x2="147.32" y2="149.86" width="0.1524" layer="91"/>
@@ -6786,13 +6795,13 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <segment>
 <wire x1="185.42" y1="43.18" x2="185.42" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="33.02" x2="190.5" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="J9" gate="G$1" pin="2"/>
 <pinref part="U$19" gate="G$1" pin="VDD"/>
+<pinref part="J9" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="220.98" y1="76.2" x2="218.44" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="86.36" x2="218.44" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="J1" gate="G$1" pin="3"/>
+<pinref part="J6" gate="G$1" pin="3"/>
 <pinref part="U$22" gate="G$1" pin="VDD"/>
 </segment>
 </net>
@@ -6805,14 +6814,9 @@ Note that there should nothing on the BOM corresponding to this "component".</de
 <approved hash="104,1,88.9,78.74,IC1,UGND,N$1,,,"/>
 <approved hash="104,1,88.9,86.36,IC1,UVCC,+5V,,,"/>
 <approved hash="104,1,88.9,99.06,IC1,VCC,VDD,,,"/>
-<approved hash="206,1,144.78,48.26,+3V3,,,,,"/>
-<approved hash="206,1,144.78,48.26,+3V3,,,,,"/>
-<approved hash="208,1,144.78,48.26,+3V3,out,,,,"/>
-<approved hash="208,1,144.78,48.26,+3V3,out,,,,"/>
-<approved hash="208,1,149.86,48.26,+3V3,sup,,,,"/>
-<approved hash="208,1,180.34,40.64,+3V3,sup,,,,"/>
-<approved hash="115,1,173.203,81.0091,J5,,,,,"/>
-<approved hash="115,1,198.603,88.6291,J4,,,,,"/>
+<approved hash="104,1,144.78,48.26,IC2,OUT,+3V3,,,"/>
+<approved hash="115,1,173.203,81.0091,J4,,,,,"/>
+<approved hash="115,1,198.603,88.6291,J3,,,,,"/>
 <approved hash="115,1,198.603,74.6591,J7,,,,,"/>
 </errors>
 </schematic>
